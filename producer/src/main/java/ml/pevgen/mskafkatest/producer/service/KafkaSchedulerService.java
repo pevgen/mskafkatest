@@ -19,7 +19,7 @@ public class KafkaSchedulerService {
 
     private int count;
 
-    @Scheduled(fixedRate = 1000)
+//    @Scheduled(fixedRate = 1000)
     public void send() {
         String message = "message " + count++;
         log.info(message);
