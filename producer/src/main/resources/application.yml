@@ -11,7 +11,6 @@ spring:
     properties:
       schema:
         registry:
-#          url: "http://172.25.10.132:8081"
           url: "http://localhost:8081"
 
 mskafkatest:

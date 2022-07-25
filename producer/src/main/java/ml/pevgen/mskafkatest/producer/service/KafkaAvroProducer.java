@@ -22,7 +22,7 @@ public class KafkaAvroProducer {
     private KafkaTemplate<String, User> kafkaTemplate;
 
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 3000)
     public void send() {
         User stockHistory = User.newBuilder().setName("name 1").setAge(123).build();
         ListenableFuture<SendResult<String, User>> future = kafkaTemplate.send(topicName, String.valueOf(stockHistory.getName()), stockHistory);
